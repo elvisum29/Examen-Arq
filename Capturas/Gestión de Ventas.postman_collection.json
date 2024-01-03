@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "a82f41c6-eb87-4232-be78-fd172bce94b8",
+		"name": "Gestión de Ventas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16921427"
+	},
+	"item": [
+		{
+			"name": "Crear nuevo Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Buso gris\",\r\n    \"descripcion\": \"Buso de algodón de manga corta\",\r\n    \"precio\": 90.99,\r\n    \"stock\": 60\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/entidad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"entidad"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear nuevo Producto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Buso gris\",\r\n    \"descripcion\": \"Buso de algodón de manga corta\",\r\n    \"precio\": 90.99,\r\n    \"stock\": 60\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/entidad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"entidad"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 20:06:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"producto_id\": 21,\n    \"nombre\": \"Buso gris\",\n    \"descripcion\": \"Buso de algodón de manga corta\",\n    \"precio\": 90.99,\n    \"stock\": 60\n}"
+				}
+			]
+		},
+		{
+			"name": "Lista productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/entidad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"entidad"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Lista productos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/entidad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"entidad"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 20:05:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"producto_id\": 2,\n        \"nombre\": \"Pantalones\",\n        \"descripcion\": \"Pantalones vaqueros de color azul\",\n        \"precio\": 29.99,\n        \"stock\": 50\n    },\n    {\n        \"producto_id\": 4,\n        \"nombre\": \"Zapatos\",\n        \"descripcion\": \"Zapatos de cuero negro\",\n        \"precio\": 49.99,\n        \"stock\": 30\n    },\n    {\n        \"producto_id\": 5,\n        \"nombre\": \"Poleras\",\n        \"descripcion\": \"Polera de algodón de manga corta\",\n        \"precio\": 119.99,\n        \"stock\": 50\n    },\n    {\n        \"producto_id\": 7,\n        \"nombre\": \"Polo Mangas\",\n        \"descripcion\": \"Polo de algodón de manga corta\",\n        \"precio\": 200.99,\n        \"stock\": 55\n    },\n    {\n        \"producto_id\": 8,\n        \"nombre\": \"Camiseta gol\",\n        \"descripcion\": \"Camiseta deportiva Messis\",\n        \"precio\": 89.5,\n        \"stock\": 100\n    },\n    {\n        \"producto_id\": 6,\n        \"nombre\": \"Camiseta Madrid\",\n        \"descripcion\": \"Camiseta deportiva Ronaldo\",\n        \"precio\": 79.5,\n        \"stock\": 100\n    },\n    {\n        \"producto_id\": 9,\n        \"nombre\": \"Polo Mangas\",\n        \"descripcion\": \"Polo de algodón de manga corta\",\n        \"precio\": 200.99,\n        \"stock\": 55\n    },\n    {\n        \"producto_id\": 10,\n        \"nombre\": \"Buso\",\n        \"descripcion\": \"Buso de algodón de manga corta\",\n        \"precio\": 99.99,\n        \"stock\": 30\n    },\n    {\n        \"producto_id\": 11,\n        \"nombre\": \"Jeans\",\n        \"descripcion\": \"Jeans color negro\",\n        \"precio\": 100.99,\n        \"stock\": 100\n    },\n    {\n        \"producto_id\": 12,\n        \"nombre\": \"Jeans Americano\",\n        \"descripcion\": \"Jeans Inportado\",\n        \"precio\": 115.99,\n        \"stock\": 50\n    },\n    {\n        \"producto_id\": 13,\n        \"nombre\": \"Jeans Blue\",\n        \"descripcion\": \"Jenas edicion limitada\",\n        \"precio\": 210.99,\n        \"stock\": 200\n    },\n    {\n        \"producto_id\": 14,\n        \"nombre\": \"Polo Americano\",\n        \"descripcion\": \"Polo Americano Negro\",\n        \"precio\": 45.99,\n        \"stock\": 75\n    },\n    {\n        \"producto_id\": 15,\n        \"nombre\": \"Casaca Jino\",\n        \"descripcion\": \"Casaca de diseñador\",\n        \"precio\": 88.99,\n        \"stock\": 150\n    },\n    {\n        \"producto_id\": 16,\n        \"nombre\": \"Calzado Sport\",\n        \"descripcion\": \"Calzado Sport Negro\",\n        \"precio\": 120.99,\n        \"stock\": 80\n    },\n    {\n        \"producto_id\": 17,\n        \"nombre\": \"Nike\",\n        \"descripcion\": \"Calzado deportivo\",\n        \"precio\": 180.99,\n        \"stock\": 120\n    },\n    {\n        \"producto_id\": 18,\n        \"nombre\": \"Adidas\",\n        \"descripcion\": \"Calzado Deportivo\",\n        \"precio\": 190.99,\n        \"stock\": 90\n    },\n    {\n        \"producto_id\": 19,\n        \"nombre\": \"Camisa\",\n        \"descripcion\": \"Camisa elegante\",\n        \"precio\": 54.99,\n        \"stock\": 60\n    },\n    {\n        \"producto_id\": 20,\n        \"nombre\": \"Chompa\",\n        \"descripcion\": \"Chompa edicion limitada\",\n        \"precio\": 160.99,\n        \"stock\": 110\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Leer por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/entidad/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"entidad",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/entidad/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"entidad",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 20:09:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"producto_id\": 6,\n    \"nombre\": \"Camiseta Belga\",\n    \"descripcion\": \"Camiseta deportiva Ronaldo\",\n    \"precio\": 79.5,\n    \"stock\": 100\n}"
+				}
+			]
+		},
+		{
+			"name": "Actualizar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Camiseta gol\",\r\n    \"descripcion\": \"Camiseta deportiva Messis\",\r\n    \"precio\": 89.50,\r\n    \"stock\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/entidad/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"entidad",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar Producto",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"producto_id\": 6,\r\n    \"nombre\": \"Camiseta Belga\",\r\n    \"descripcion\": \"Camiseta deportiva Ronaldo\",\r\n    \"precio\": 79.50,\r\n    \"stock\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/entidad/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"entidad",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 20:08:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"producto_id\": 6,\n    \"nombre\": \"Camiseta Belga\",\n    \"descripcion\": \"Camiseta deportiva Ronaldo\",\n    \"precio\": 79.5,\n    \"stock\": 100\n}"
+				}
+			]
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/entidad/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"entidad",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Eliminar Producto",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/entidad/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"entidad",
+								"15"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 20:09:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

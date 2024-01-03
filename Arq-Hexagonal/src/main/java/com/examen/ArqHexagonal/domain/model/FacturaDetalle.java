@@ -11,8 +11,8 @@ public class FacturaDetalle {
     private FacturaCabecera facturaCabecera;
 
     private Long detalle_id;
-    private Long factura_id=facturaCabecera.getFactura_id();
-    private Long producto_id=productos.getProducto_id();
+    private Long factura_id;
+    private Long producto_id;
     private int cantidad;
     private double precio_unitario;
     private double subtotal;
